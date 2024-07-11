@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Header</title>
+    <link rel="stylesheet" href="2016.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="/Imagenes/logo.png" alt="logo">
+            </a>
+            <a href="/Bibliografia/indexBibliografia.html" class="header-title">DATOS 2020</a>
+            <a href="/Steve/indexSteve.html" class="nosotros">
+                <img src="/Imagenes/steve.png" id="img-steve" alt="Steve">
+            </a>
+        </div>
+    </header>
+
+    <section class="content-box">
+        <div class="section-title">
+            <h2>Número de Detenciones</h2>
+            <input type="text" placeholder="Ingrese número" class="input-number">
+        </div>
+    </section>
+
+    <section class="content-box">
+        <div class="section-title">
+            <h2>Estadísticas por Género y Edades</h2>
+        </div>
+        <div class="image-container">
+            <div class="image-with-caption">
+                <img src="/Imagenes/ejem.png" alt="Imagen de estadísticas" class="statistics-image">
+            </div>
+            <div class="text-box">
+                <textarea placeholder="Aquí puedes ingresar texto estático o dinámico" class="text-input"></textarea>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box">
+        <div class="section-title">
+            <h2>Estadísticas de Armas</h2>
+        </div>
+        <div class="weapons-list">
+            <ul>
+                <li><a href="#" onclick="mostrarCantidad('Ametralladoras', 10)">Ametralladoras</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Escopetas', 4)">Escopetas</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Rifles', 9)">Rifles</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Rifles francotiradores', 87)">Rifles francotiradores</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Fusiles de asalto', 74)">Fusiles de asalto</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Revólveres', 7)">Revólveres</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Pistolas', 6)">Pistolas</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Lanzacohetes', 1)">Lanzacohetes</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Subfusiles', 5)">Subfusiles</a></li>
+                <li><a href="#" onclick="mostrarCantidad('Carabinas', 12)">Carabinas</a></li>
+            </ul>
+            <div class="weapon-count" id="cantidadArmas"></div>
+        </div>
+    </section>
+
+    <section class="content-box">
+        <div class="section-title">
+            <h2>Comparativa de Infracciones</h2>
+        </div>
+        <div class="comparison-container">
+            <div class="comparison-box infraccion-list">
+                <ul>
+                    <li><a href="#" onclick="mostrarEdad('Robo')">Robo</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Asalto')">Asalto</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Tráfico de drogas')">Tráfico de drogas</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Vandalismo')">Vandalismo</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Fraude')">Fraude</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Secuestro')">Secuestro</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Homicidio')">Homicidio</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Extorsión')">Extorsión</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Contrabando')">Contrabando</a></li>
+                    <li><a href="#" onclick="mostrarEdad('Lavado de dinero')">Lavado de dinero</a></li>
+                </ul>
+            </div>
+            <div class="comparison-box infraccion-edad" id="edadInfraccion">
+                Edad: <span id="edad"></span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function mostrarCantidad(arma, cantidad) {
+            document.getElementById('cantidadArmas').innerText = `${arma}: ${cantidad}`;
+        }
+
+        function mostrarEdad(infraccion) {
+            const edades = {
+                'Robo': Math.floor(Math.random() * 40) + 18,
+                'Asalto': Math.floor(Math.random() * 40) + 18,
+                'Tráfico de drogas': Math.floor(Math.random() * 40) + 18,
+                'Vandalismo': Math.floor(Math.random() * 40) + 18,
+                'Fraude': Math.floor(Math.random() * 40) + 18,
+                'Secuestro': Math.floor(Math.random() * 40) + 18,
+                'Homicidio': Math.floor(Math.random() * 40) + 18,
+                'Extorsión': Math.floor(Math.random() * 40) + 18,
+                'Contrabando': Math.floor(Math.random() * 40) + 18,
+                'Lavado de dinero': Math.floor(Math.random() * 40) + 18,
+            };
+            document.getElementById('edad').innerText = edades[infraccion];
+        }
+    </script>
+</body>
+</html>
