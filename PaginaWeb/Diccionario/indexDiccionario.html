@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="styleDiccionario.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="menu container">
+            <a href="../index.html" class="logo">
+                <img src="../Imagenes/logo.png" alt="logo"> 
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Bibliografia/indexBibliografia.html">Practicum</a></li>
+                    <li><a href="../Modelos/indexModelos.html">Modelos</a></li>
+                    <li><a href="../Diccionario/indexDiccionario.html" class="active">Diccionario</a></li> 
+                </ul>
+            </nav>
+            <div class="nosotros">
+                <a href="../Steve/indexSteve.html">
+                    <img src="../Imagenes/steve.png" id="img-steve" alt="Steve"> 
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="table-container">
+        <!-- Aquí puedes repetir esta estructura para cada tabla -->
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Armas</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>arma</td>
+                        <td>VARCHAR(20)</td>
+                        <td>Descripción específica del arma</td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>tipo_arma</td>
+                        <td>VARCHAR(20)</td>
+                        <td>Descripción generalizada del arma</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>sancion</td>
+                        <td>VARCHAR(250)</td>
+                        <td>Descripción de la presunta sanción</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Infracciones</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>presunta_subinfraccion</td>
+                        <td>VARCHAR(150)</td>
+                        <td>Descripción de la presunta subinfracción</td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>presunta_infraccion</td>
+                        <td>VARCHAR(150)</td>
+                        <td>Descripción de la presunta infracción</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Lugares</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>lugar</td>
+                        <td>VARCHAR(50)</td>
+                        <td>Descripción del lugar</td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>tipo_lugar</td>
+                        <td>VARCHAR(60)</td>
+                        <td>Descripción del edificio Area</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Variables</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variable_id </td>
+                        <td>INT</td>
+                        <td>Identificador de la variable</td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>num_edificios_admin</td>
+                        <td>INT</td>
+                        <td>Numero de edificios </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>num_vehiculos</td>
+                        <td>INT</td>
+                        <td>Numero de vehiculos</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Nacionalidades</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nacionalidad  </td>
+                        <td>VARCHAR(15) </td>
+                        <td>Descripcion de la Nacionalidad</td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>poblacion</td>
+                        <td>INT</td>
+                        <td>Numero de Poblacion  </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Zona</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>zona   </td>
+                        <td>VARCHAR(7) </td>
+                        <td>Zona de la detencion </td>
+                        <td>PK</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: SubZona</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre_subzona </td>
+                        <td>VARCHAR(35)  </td>
+                        <td>Nombre de la subzona </td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>zona</td>
+                        <td>VARCHAR(7)</td>
+                        <td>Identificador de la zona </td>
+                        <td>FK</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-title">Tabla: Provincias</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>codigo_provincia </td>
+                        <td>INT </td>
+                        <td>Identificador de la provincia </td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>nombre_provincia </td>
+                        <td>VARCHAR(35)</td>
+                        <td>Nombre de la provincia </td>
+                    </tr>
+                    <tr>
+                        <td>nombre_subzona </td>
+                        <td>VARCHAR(35)</td>
+                        <td>Identificador de la subzona</td>
+                        <td>FK</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <div class="table-wrapper">
+                <div class="table-title">Tabla: Cantones</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributos</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>codigo_canton</td>
+                            <td>INT</td>
+                            <td>Identificador del cantón</td>
+                            <td>PK</td>
+                        </tr>
+                        <tr>
+                            <td>nombre_canton</td>
+                            <td>VARCHAR(35)</td>
+                            <td>Nombre del cantón</td>
+                        </tr>
+                        <tr>
+                            <td>codigo_provincia</td>
+                            <td>INT</td>
+                            <td>Identificador de la provincia</td>
+                            <td>FK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="table-wrapper">
+                <div class="table-title">Tabla: Parroquias</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributos</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>codigo_parroquia</td>
+                            <td>INT</td>
+                            <td>Identificador de la parroquia</td>
+                            <td>PK</td>
+                        </tr>
+                        <tr>
+                            <td>nombre_parroquia</td>
+                            <td>VARCHAR(35)</td>
+                            <td>Nombre de la parroquia</td>
+                        </tr>
+                        <tr>
+                            <td>codigo_canton</td>
+                            <td>INT</td>
+                            <td>Identificador del cantón</td>
+                            <td>FK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="table-wrapper">
+                <div class="table-title">Tabla: Distritos</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributos</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>codigo_distrito</td>
+                            <td>VARCHAR(5)</td>
+                            <td>Identificador del distrito</td>
+                            <td>PK</td>
+                        </tr>
+                        <tr>
+                            <td>nombre_distrito</td>
+                            <td>VARCHAR(35)</td>
+                            <td>Nombre del distrito</td>
+                        </tr>
+                        <tr>
+                            <td>codigo_parroquia</td>
+                            <td>INT</td>
+                            <td>Identificador de la parroquia</td>
+                            <td>FK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-wrapper">
+                <div class="table-title">Tabla: Circuitos</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributos</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>codigo_circuito</td>
+                            <td>VARCHAR(8)</td>
+                            <td>Identificador del circuito</td>
+                            <td>PK</td>
+                        </tr>
+                        <tr>
+                            <td>nombre_circuito</td>
+                            <td>VARCHAR(35)</td>
+                            <td>Nombre del circuito</td>
+                        </tr>
+                        <tr>
+                            <td>codigo_distrito</td>
+                            <td>VARCHAR(5)</td>
+                            <td>Código del distrito</td>
+                            <td>FK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-wrapper">
+                <div class="table-title">Tabla: subCircuito</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributos</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>codigo_circuito</td>
+                            <td>VARCHAR(11)</td>
+                            <td>Identificador del subcircuito </td>
+                            <td>PK</td>
+                        </tr>
+                        <tr>
+                            <td>nombre_ subcircuito</td>
+                            <td>VARCHAR(35)</td>
+                            <td>Nombre del subcircuito </td>
+                        </tr>
+                        <tr>
+                            <td>codigo_circuito </td>
+                            <td>VARCHAR(5)</td>
+                            <td>Identificador del circuito</td>
+                            <td>FK</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cuadro">
+                    <p>Un diccionario de datos en el contexto de bases de datos es una colección centralizada de información sobre los datos almacenados en una base de datos. Funciona como una especie de catálogo que describe la estructura, las relaciones, las restricciones y otras características de los datos. Este diccionario incluye detalles sobre las tablas, columnas, tipos de datos, índices, restricciones de integridad, procedimientos almacenados, y vistas que conforman la base de datos.</p>
+                    
+                    <p>El diccionario de datos es crucial para la administración y el diseño de bases de datos porque proporciona metadatos esenciales que permiten a los administradores y desarrolladores entender cómo se organiza y utiliza la información. Estos metadatos incluyen nombres de tablas y columnas, tipos de datos de las columnas, relaciones entre tablas (como claves primarias y foráneas), así como reglas y restricciones aplicadas a los datos.</p>
+                    
+                    <p>Además, el diccionario de datos facilita la documentación y el mantenimiento de la base de datos. Permite a los usuarios realizar consultas sobre la estructura de la base de datos sin tener que inspeccionarla directamente, ayudando a garantizar la coherencia y la integridad de los datos. También es fundamental para la seguridad, ya que define los permisos y accesos a diferentes partes de la base de datos, asegurando que solo usuarios autorizados puedan realizar ciertas acciones. En resumen, un diccionario de datos es una herramienta indispensable para la gestión eficaz de cualquier sistema de base de datos.</p>
+                    
+                    <p>Un diccionario de datos también mejora la eficiencia del desarrollo y la implementación de nuevas aplicaciones, ya que proporciona una visión clara y detallada de cómo se estructura la base de datos. Los desarrolladores pueden utilizar esta información para asegurar que sus aplicaciones se integren correctamente con la base de datos existente. Además, durante el proceso de actualización o migración de sistemas, el diccionario de datos se convierte en una referencia vital para garantizar que los cambios se implementen sin causar disrupciones significativas.</p>
+                    
+                    <p>En entornos empresariales, donde múltiples equipos pueden trabajar en la misma base de datos, el diccionario de datos actúa como un único punto de referencia, reduciendo la posibilidad de errores de comunicación y mejorando la colaboración. También facilita la auditoría y el cumplimiento normativo, proporcionando registros detallados sobre cómo se gestionan y protegen los datos.</p>
+                    
+                    <p>La capacidad de rastrear y documentar cada aspecto de la base de datos mediante un diccionario de datos no solo mejora la transparencia, sino que también contribuye a una mejor planificación y toma de decisiones. Por ejemplo, al comprender completamente las dependencias y relaciones dentro de la base de datos, los administradores pueden identificar áreas para la optimización y asegurar que los recursos se asignen de manera eficiente.</p>
+                </div>
+                
+            </div>
+
+            <div class="table-wrapper">
+                <div class="table-title">Tabla: Detenciones</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributos</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Característica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>detenciones_id</td>
+                            <td>INT</td>
+                            <td>Identificador de la detención</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>tipo</td>
+                            <td>VARCHAR(12)</td>
+                            <td>Si el delincuente fue aprehendido por ciudadano o detenido por la policía</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>condicion</td>
+                            <td>VARCHAR(100)</td>
+                            <td>Condición en la que se encontró el detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>movilización</td>
+                            <td>VARCHAR(15)</td>
+                            <td>Donde se transportaba el delincuente</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>fecha_detencion</td>
+                            <td>DATE</td>
+                            <td>Fecha de la detención</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>hora_detencion</td>
+                            <td>TIMESTAMP</td>
+                            <td>Hora de la detención</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>presunta_flagrancia</td>
+                            <td>VARCHAR(2)</td>
+                            <td>Si el delincuente fue encontrado cometiendo el acto</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>presunta_modalidad</td>
+                            <td>VARCHAR(150)</td>
+                            <td>Forma de cometer el delito</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>codigo_subcircuito</td>
+                            <td>VARCHAR(11)</td>
+                            <td>Llave foránea del subcircuito donde se cometió el delito</td>
+                            <td>FK</td>
+                        </tr>
+                        <tr>
+                            <td>arma</td>
+                            <td>VARCHAR(20)</td>
+                            <td>Identificador del arma relacionada</td>
+                            <td>FK</td>
+                        </tr>
+                        <tr>
+                            <td>lugar</td>
+                            <td>VARCHAR(50)</td>
+                            <td>Identificador del lugar relacionado</td>
+                            <td>FK</td>
+                        </tr>
+                        <tr>
+                            <td>presunta_subinfraccion</td>
+                            <td>VARCHAR(150)</td>
+                            <td>Identificado de la subinfracción relacionada</td>
+                            <td>FK</td>
+                        </tr>
+                        <tr>
+                            <td>codigo_iccs</td>
+                            <td>VARCHAR(100)</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>estado_civil</td>
+                            <td>VARCHAR(15)</td>
+                            <td>Estado civil del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>estatus_migratorio</td>
+                            <td>VARCHAR(10)</td>
+                            <td>Estatus migratorio del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>edad</td>
+                            <td>INT</td>
+                            <td>Edad del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>genero</td>
+                            <td>VARCHAR(15)</td>
+                            <td>Género del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>nacionalidad</td>
+                            <td>VARCHAR(15)</td>
+                            <td>Nacionalidad del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>autoidentificacion_etnica</td>
+                            <td>VARCHAR(40)</td>
+                            <td>Autoidentificación étnica del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>numero_detenciones</td>
+                            <td>INT</td>
+                            <td>Veces que ha sido detenido la persona</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>nivel_instruccion</td>
+                            <td>VARCHAR(45)</td>
+                            <td>Nivel de aprendizaje del detenido</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>sexo</td>
+                            <td>VARCHAR(12)</td>
+                            <td>Sexo del detenido</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+    </div>
+
+    <script src="../script.js"></script> 
+
+</body>
+</html>

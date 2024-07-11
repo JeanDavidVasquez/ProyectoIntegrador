@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Estilo para el enlace activo */
+.navbar ul li a.active {
+    font-weight: bold;
+    color: #cce514; /* Cambia el color según tus preferencias */
+}
+
+.menu.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+.nosotros {
+    display: flex;
+    align-items: center;
+}
+
+.nosotros img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nosotros img:hover {
+    transform: scale(1.1);
+}
+
+.content-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1300px; /* Ajusta el ancho máximo según tu preferencia */
+    text-align: justify;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1300px;
+}
+
+.image-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    margin: 20px 0;
+}
+
+.image-box {
+    margin: 0 10px; /* Margen entre las imágenes */
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #333;
+    margin: 10px 0; /* Margen superior e inferior */
+    transition: transform 0.3s ease; /* Transición para el efecto de zoom */
+}
+
+.image-box img.zoom {
+    transform: scale(1.5); /* Ajusta el nivel de zoom */
+}
+
+@media (max-width: 768px) {
+    .menu.container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-box {
+        max-width: 90%; /* Ajusta el ancho máximo para pantallas pequeñas */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-box {
+        max-width: 100%;
+    }
+}
