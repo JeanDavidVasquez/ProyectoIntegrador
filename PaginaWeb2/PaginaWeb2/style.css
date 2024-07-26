@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Estilo para el enlace activo */
+.navbar ul li a.active {
+    font-weight: bold;
+    color: #cce514; /* Cambia el color según tus preferencias */
+}
+
+.menu.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+.content-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1300px; /* Ajusta el ancho máximo según tu preferencia */
+    text-align: justify;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.nosotros {
+    display: flex;
+    align-items: center;
+}
+
+.nosotros img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.nosotros img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .menu.container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-box {
+        max-width: 90%; /* Ajusta el ancho máximo para pantallas pequeñas */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+    margin-top: 20px;
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.image-card {
+    width: calc(25% - 20px); /* Ajusta el ancho de cada tarjeta */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #333; /* Borde negro */
+}
+
+.image-card img {
+    width: 600px; /* Ajusta el ancho de la imagen */
+    height: 300px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white; /* Color de fondo para el zoom */
+    padding: 20px;
+    border: 2px solid #333; /* Borde negro */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+/* Estilos para el cuadro de video y texto */
+.video-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente el contenido */
+    margin-top: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-card {
+    width: 100%; /* Ajusta el ancho del cuadro de video al 100% del contenedor */
+    height: 400px; /* Altura fija del cuadro de video */
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.video-card iframe {
+    width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
+    height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
+    border: none; /* Elimina el borde del iframe */
+}
+
+
+.text-card {
+    width: 1000px; /* Ajusta el ancho del cuadro de texto */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+
+.text-card h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .video-text-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card, .text-card {
+        width: 90%;
+    }
+}
